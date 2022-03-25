@@ -1,0 +1,5 @@
+  <nav>
+  {% for naventry in site.data.sub-navbar %}
+    <a class="btn nav-link{% if page.sub-menu == naventry.key or layout.sub-menu == naventry.key%} active" aria-current="page{% endif %}" href="{{ naventry.href }}">{{ naventry.title }}</a>
+  {% endfor %}
+  </nav>

@@ -1,0 +1,21 @@
+-
+  key: home
+  href: /
+-
+  key: services
+-
+  key: technology
+-
+  key: about
+-
+  key: contact
+-
+-
+  key: articles
+  items:
+    -
+      key: code
+    -
+      key: design
+    -
+      key: other
