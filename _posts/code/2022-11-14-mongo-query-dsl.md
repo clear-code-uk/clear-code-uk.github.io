@@ -1,7 +1,10 @@
 ---
 layout: post
+category: Code
 title: Mongo query DSL
-category: [code, scala]
+tags:
+- Scala
+- MongoDB
 ---
 
 # Filters

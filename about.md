@@ -1,6 +1,6 @@
 ---
 title: About Us
-menu: about
+menu: [about]
 ---
 
 Founded in 2016, Clear Code is a boutique software development consultancy based in West London.

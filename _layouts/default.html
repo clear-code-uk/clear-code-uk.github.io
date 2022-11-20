@@ -15,8 +15,8 @@
     <header>
       <div class="container">
         <h1 class="page-title">{{ site.title }}</h1>
-        {% assign key = page.menu | default: layout.menu %}
-        {% include navbar.html entries = site.data.main-menu current-key = key %}
+        {% assign keys = page.menu | default: layout.menu %}
+        {% include navbar.html entries = site.data.main-menu current-keys = keys %}
       </div>
     </header>
     

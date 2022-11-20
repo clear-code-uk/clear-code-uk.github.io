@@ -1,6 +1,6 @@
 ---
 title: Technology
-menu: technology
+menu: [technology]
 ---
        
 At Clear Code, our primary development language on the JVM is Scala.

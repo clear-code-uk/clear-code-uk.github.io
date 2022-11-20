@@ -1,14 +1,18 @@
 {% if include.entries %}
-{% assign level = include.level | default: 0 %}
-{% assign level-class = level | prepend: "nav-level-" %}
+  {% assign level = include.level | default: 0 %}
+  {% assign level-class = level | prepend: "nav-level-" %}
+  {% assign current-key = include.current-keys[level] %}
+  {% if include.parent %} {% assign parent = include.parent | append: "/" %} {% else %} {% assign parent = "/" %} {% endif %}
 <nav>
 {% for naventry in include.entries %}
   {% if naventry %}
     {% if naventry.title %} {% assign title = naventry.title %} {% else %} {% assign title = naventry.key | capitalize %} {% endif %}
-    {% if naventry.href %} {% assign href = naventry.href %} {% else %} {% assign href = naventry.key | prepend: "/" %} {% endif %}
-    <a class="nav-link {{ level-class }}{% if naventry.key == include.current-key %} active" aria-current="page{% endif %}" href="{{ href }}">{{ title }}</a>
-    {% if naventry.key == include.current-key %}
-      {% include navbar.html entries = naventry.items current-key = naventry.key %}
+    {% if naventry.href %} {% assign href = naventry.href %} {% else %} {% assign href = parent | append: naventry.key %} {% endif %}
+    <a class="nav-link {{ level-class }}{% if naventry.key == current-key %} active" aria-current="page{% endif %}" href="{{ href }}">{{ title }}</a>
+    {% if naventry.key == current-key %}
+      {% assign next-level = level | plus: 1 %}
+      {% assign next-parent = parent | append: current-key %}
+      {% include navbar.html entries = naventry.items level = next-level current-keys = include.current-keys parent = next-parent %}
     {% endif %}
   {% else %}
     <span class="nav-separator"></span>

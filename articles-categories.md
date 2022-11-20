@@ -1,6 +1,6 @@
 ---
 title: Articles by Category
-menu: articles
+menu: [articles]
 ---
 
 ## Tags

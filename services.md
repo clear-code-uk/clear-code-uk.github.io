@@ -1,6 +1,6 @@
 ---
 title: Services
-menu: services
+menu: [services]
 ---
 
 Clear Code can help your company with the following services:

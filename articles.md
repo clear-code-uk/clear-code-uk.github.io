@@ -1,6 +1,6 @@
 ---
 title: Articles
-menu: articles
+menu: [articles, all]
 ---
 
 ## Categories

@@ -12,10 +12,21 @@
 -
 -
   key: articles
+  href: /articles/all
   items:
     -
-      key: code
+      key: all
     -
-      key: design
+    -
+      key: Code
+      href: code
+    -
+      key: Design
+      href: design
     -
       key: other
+    -
+    -
+      key: categories
+    -
+      key: tags

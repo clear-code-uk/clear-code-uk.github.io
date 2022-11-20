@@ -13,7 +13,7 @@
 
 nav {
   text-align: right;
-  margin-top: 4px;
+  margin-top: 10px;
 }
 
 .nav-link, .sub-nav-link {
@@ -54,6 +54,12 @@ nav {
 
 ul {
   text-align: left;
+}
+
+.counter {
+  border: 2px solid;
+  border-radius: 50px;
+  padding: 3px 6px 3px 6px;
 }
 
 dt {

@@ -1,7 +1,11 @@
 ---
 layout: post
+category: Code
 title: How to create a MongoDb Codec for a val type
-category: code
+tags:
+- Scala
+- MongoDB
+- Shapeless
 ---
 
 ```scala

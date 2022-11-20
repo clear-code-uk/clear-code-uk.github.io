@@ -1,6 +1,6 @@
 ---
 title: Contact Us
-menu: contact
+menu: [contact]
 ---
 
 Contact us via email: <clearcode@gmail.com>
