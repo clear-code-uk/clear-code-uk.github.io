@@ -1,0 +1,16 @@
+---
+layout: list
+title: All tags
+menu: [articles, tags]
+---
+
+<ul>
+{%- for tagrecord in site.tags -%}
+  {%- assign tag = tagrecord[0] -%}
+  {%- assign posts = tagrecord[1] -%}
+  <li>
+    <h2>{{ tag }} {% include counter.html count = posts.size %}</h2>
+    {% include posts-list.html posts = posts %}
+  </li>
+{%- endfor -%}
+</ul>

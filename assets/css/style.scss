@@ -54,6 +54,7 @@ nav {
 
 ul {
   text-align: left;
+  margin: 20px 0 20px 0;
 }
 
 .counter {
@@ -83,4 +84,20 @@ a:hover {
 
 .technology dd {
   margin-left: 0;
+}
+
+
+.status {
+  font-size: 65%;
+  border-radius: 50px;
+  padding: 3px 6px 3px 6px;
+  color: #151515;
+}
+
+.status.draft {
+  background-color: #e8536b;
+}
+
+.status.review {
+  background-color: #8653e8;
 }

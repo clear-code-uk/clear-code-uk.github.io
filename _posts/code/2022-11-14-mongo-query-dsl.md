@@ -2,6 +2,7 @@
 layout: post
 category: Code
 title: Mongo query DSL
+status: draft
 tags:
 - Scala
 - MongoDB

@@ -1,0 +1,16 @@
+---
+layout: list
+title: All categories
+menu: [articles, categories]
+---
+
+<ul>
+{%- for categoryrecord in site.categories -%}
+  {%- assign category = categoryrecord[0] -%}
+  {%- assign posts = categoryrecord[1] -%}
+  <li>
+    <h2>{{ category }} {% include counter.html count = posts.size %}</h2>
+    {% include posts-list.html posts = posts %}
+  </li>
+{%- endfor -%}
+</ul>

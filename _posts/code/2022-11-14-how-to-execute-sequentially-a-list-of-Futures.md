@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to execute sequentially a list of Futures
+status: review
 category: Code
 tags:
   - Scala
