@@ -47,15 +47,15 @@ object ValueWrapperMongoCodec {
 }
 
 trait DefaultMongoCodecs {
-  implicit val booleanMongoCodec: Codec[Boolean] = bimap[java.lang.Boolean, Boolean](new BooleanCodec(), Boolean.unbox, Boolean.box)
-  implicit val intMongoCodec:     Codec[Int]     = bimap[Integer, Int](new IntegerCodec(), Int.unbox, Int.box)
-  implicit val longMongoCodec:    Codec[Long]    = bimap[java.lang.Long, Long](new LongCodec(), Long.unbox, Long.box)
-  implicit val floatMongoCodec:   Codec[Float]   = bimap[java.lang.Float, Float](new FloatCodec(), Float.unbox, Float.box)
-  implicit val doubleMongoCodec:  Codec[Double]  = bimap[java.lang.Double, Double](new DoubleCodec(), Double.unbox, Double.box)
+  implicit val booleanMongoCodec: Codec[Boolean] = imap[java.lang.Boolean, Boolean](new BooleanCodec(), Boolean.unbox, Boolean.box)
+  implicit val intMongoCodec:     Codec[Int]     = imap[Integer, Int](new IntegerCodec(), Int.unbox, Int.box)
+  implicit val longMongoCodec:    Codec[Long]    = imap[java.lang.Long, Long](new LongCodec(), Long.unbox, Long.box)
+  implicit val floatMongoCodec:   Codec[Float]   = imap[java.lang.Float, Float](new FloatCodec(), Float.unbox, Float.box)
+  implicit val doubleMongoCodec:  Codec[Double]  = imap[java.lang.Double, Double](new DoubleCodec(), Double.unbox, Double.box)
   implicit val stringCodec:       Codec[String]  = new StringCodec()
   implicit val dateMongoCodec:    Codec[Date]    = new DateCodec()
 
-  def bimap[A, B](codec: Codec[A], f: A => B, g: B => A)(implicit ct: ClassTag[B]): Codec[B] =
+  def imap[A, B](codec: Codec[A], f: A => B, g: B => A)(implicit ct: ClassTag[B]): Codec[B] =
     new Codec[B] {
       override def getEncoderClass: Class[B] =
         ct.runtimeClass.asInstanceOf[Class[B]]
