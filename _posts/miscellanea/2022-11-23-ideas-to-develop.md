@@ -1,7 +1,7 @@
 ---
 layout: post
 category: Miscellanea
-title: Ideas to develop into articles
+title: Ideas to develop
 status: draft
 ---
 

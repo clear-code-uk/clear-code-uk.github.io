@@ -1,16 +1,16 @@
 ---
 layout: list
-title: Other articles
-menu: [articles, other]
+title: All categories
+menu: [ruminations, categories]
 ---
 
 <ul>
 {%- for categoryrecord in site.categories -%}
   {%- assign category = categoryrecord[0] -%}
   {%- assign posts = categoryrecord[1] -%}
-  {% unless category == "Code" or category == "Design" %}
+  <li>
     <h2>{{ category }} {% include counter.html count = posts.size %}</h2>
     {% include posts-list.html posts = posts %}
-  {% endunless %}
+  </li>
 {%- endfor -%}
 </ul>

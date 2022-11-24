@@ -11,8 +11,8 @@
   key: contact
 -
 -
-  key: articles
-  href: /articles/all
+  key: ruminations
+  href: /ruminations/all
   items:
     -
       key: all
